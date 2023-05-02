@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>LANDINGPAGE</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;700;900&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+      :root {
+        --bg-color: #929292c5;
+        --secondary-color: #d0c6f0d6;
+        --profile-color: #fff;
+        --btn-color: #7028fa;
+      }
+      body {
+        background-color: var(--bg-color);
+        /* background: inherit; */
+      }
+      html {
+        font-size: 62.5%;
+      }
+      section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        width: 100vw;
+      }
+      .profile {
+        box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.2);
+        background-color: var(--secondary-color);
+        padding: 2.5rem 0;
+        border-radius: 1rem;
+        outline: 0.2rem solid #fff;
+        position: relative;
+        width: 70%;
+        /* height: 70%; */
+      }
+      .profile-info {
+        position: absolute;
+        z-index: 5;
+        left: 0;
+        top: 0;
+        background-color: var(--profile-color);
+        width: 3.5rem;
+        height: 100%;
+        border-top-left-radius: 1rem !important;
+        border-bottom-left-radius: 1rem !important;
+      }
+      .heading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      .align {
+        /* display: flex; */
+        /* justify-content: center;
+           align-items: center; */
+        /* flex-direction: row; */
+        /* gap: 40rem; */
+        margin-left: 55%;
+      }
+      /* .align:last-child{
+            justify-self: flex-end;
+        } */
+      .icons {
+        /* display: inline-block; */
+        font-size: 1.5rem;
+        /* height: 2.5rem; */
+        display: flex;
+        align-self: center;
+        padding: 1rem;
+        background-color: var(--bg-color);
+        /* margin-right: 1rem; */
+      }
+      .profile-content:first-child {
+        opacity: 0.5;
+      }
+      .profile-content {
+        display: flex;
+        flex-direction: row;
+        /* align-items: center; */
+        /* justify-content: space-around; */
+        gap: 1.5rem;
+      }
+      h6 {
+        font-size: 1.7rem;
+        font-weight: 500;
+        opacity: 0.7;
+      }
+      p {
+        font-size: 1.2rem;
+        font-weight: 300;
+        opacity: 0.7;
+      }
+      .verify {
+        background-color: green;
+        color: white;
+        margin-left: 1rem;
+        font-size: 1.5rem;
+        display: flex;
+        align-self: center;
+      }
+      .center {
+        margin: 0 auto;
+        /* display: flex; */
+        width: 60%;
+        padding: 1rem;
+        /* margin: 1rem; */
+        /* justify-content: center; */
+      }
+      .btn {
+        /* display: flex; */
+        align-self: center;
+        /* display: grid; */
+        /* gap: 5rem; */
+        /* grid-template-columns: auto; */
+        /* justify-self: flex-start; */
+        /* flex-direction: row; */
+        background-color: var(--btn-color);
+        padding: 1rem 2rem;
+        color: var(--profile-color);
+        /* width: 10rem; */
+        margin-left: 9rem;
+        /* gap: 5rem; */
+        /* margin: 0 auto; */
+        /* float: right !important;  */
+      }
+      span {
+        font-size: 1.3rem;
+        font-weight: 400;
+        /* opacity: .7; */
+      }
+      .line {
+        /* border-bottom: .2rem solid green; */
+        box-shadow: 0 0.8rem 1.6rem rgba(0, 0, 0, 0.2);
+        border-radius: 0.5rem !important;
+      }
+      /* .line2{
+            border-bottom: .1rem solid green;
+         } */
+      h3 {
+        font-size: 2rem;
+        font-weight: 500;
+        opacity: 0.8;
+      }
+      i {
+        font-size: 1.5rem;
+        /* height: 2.5rem; */
+        display: flex;
+        align-self: center;
+        padding: 1rem;
+      }
+      .user {
+        /* font-size: 1.5rem; */
+        /* height: 2.5rem; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        /* text-align: center !important; */
+        /* margin-top: 1rem; */
+        margin: 1rem auto;
+        /* padding: 1rem; */
+        max-width: 70%;
+        padding: 0 0.5rem;
+        align-self: center;
+        /* justify-self: center; */
+        background-color: black;
+        /* padding: none !important; */
+        border-radius: 100%;
+        /* border: 1px solid red; */
+      }
+      .msg {
+        position: absolute;
+        z-index: 999;
+        right: 3%;
+        bottom: 3%;
+        background-color: black;
+        border-radius: 100%;
+        max-width: 70%;
+        margin: 1rem auto;
+        color: white;
+      }
+      a {
+        text-decoration: none;
+        color: var(--bg-color);
+      }
+      i:hover {
+        /* background-color: ; */
+        color: var(--btn-color);
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="profile">
+        <div class="heading">
+          <h3>Congrats on the new community</h3>
+          <p>
+            Complete these simple steps to get your community up and running
+          </p>
+        </div>
+
+        <div class="center">
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item line">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button line"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                  aria-expanded="true"
+                  aria-controls="collapseOne"
+                >
+                  <span class="line2">Getting Started</span>
+                  <span class="align">4 steps left</span>
+                </button>
+              </h2>
+              <div
+                id="collapseOne"
+                class="accordion-collapse collapse show"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body profile-content">
+                  <i class="bi bi-play-btn icons"></i>
+                  <div>
+                    <h6>Create your community</h6>
+                    <p>
+                      The best way to get started is to quit talking and being
+                      doing
+                    </p>
+                  </div>
+                  <i class="bi bi-patch-check verify"></i>
+                </div>
+
+                <!------------------------ second ---------------->
+                <div class="accordion-body profile-content">
+                  <i class="bi bi-house icons"></i>
+                  <div>
+                    <h6>Get to know Tribe Platform</h6>
+                    <p>See what you'll be able to do with Tribe</p>
+                  </div>
+                  <button class="btn">Play video</button>
+                </div>
+
+                <!------------------------ Third ---------------->
+                <div class="accordion-body profile-content">
+                  <i class="bi bi-file-arrow-up icons"></i>
+                  <div>
+                    <h6>Upload your logo</h6>
+                    <p>Select an image and upload your logo</p>
+                  </div>
+                  <button class="btn">Upload logo</button>
+                </div>
+
+                <!------------------------ Four ---------------->
+                <div class="accordion-body profile-content">
+                  <i class="bi bi-people-fill icons"></i>
+                  <div>
+                    <h6>Invite your teammates</h6>
+                    <p>Invite other admins,friend and moderators</p>
+                  </div>
+
+                  <button class="btn">Invite</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- ----------------------------------------------------- 2 accordion-------------------------------------------------------------- -->
+
+            <div class="accordion-item mt-3 line">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button line collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="collapseTwo"
+                >
+                  <span>Getting Started</span>
+                  <span class="align">4 steps left</span>
+                </button>
+              </h2>
+              <div
+                id="collapseTwo"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body profile-content">
+                  <i class="bi bi-play-btn icons"></i>
+                  <div>
+                    <h6>Create your community</h6>
+                    <p>
+                      The best way to get started is to quit talking and being
+                      doing
+                    </p>
+                  </div>
+                  <i class="bi bi-patch-check verify"></i>
+                </div>
+
+                <!------------------------ second ---------------->
+                <div class="accordion-body profile-content">
+                  <i class="bi bi-house icons"></i>
+                  <div>
+                    <h6>Get to know Tribe Platform</h6>
+                    <p>See what you'll be able to do with Tribe</p>
+                  </div>
+                  <button class="btn">Play video</button>
+                </div>
+
+                <!------------------------ Third ---------------->
+                <div class="accordion-body profile-content">
+                  <i class="bi bi-file-arrow-up icons"></i>
+                  <div>
+                    <h6>Upload your logo</h6>
+                    <p>Select an image and upload your logo</p>
+                  </div>
+                  <button class="btn">Upload logo</button>
+                </div>
+
+                <!------------------------ Four ---------------->
+                <div class="accordion-body profile-content">
+                  <i class="bi bi-people-fill icons"></i>
+                  <div>
+                    <h6>Invite your teammates</h6>
+                    <p>Invite other admins,friend and moderators</p>
+                  </div>
+
+                  <button class="btn">Invite</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- ----------------------------------------------------- 3 accordion-------------------------------------------------------------- -->
+
+            <div class="accordion-item mt-3 line">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button line collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree"
+                  aria-expanded="false"
+                  aria-controls="collapseThree"
+                >
+                  <span>Getting Started</span>
+                  <span class="align">4 steps left</span>
+                </button>
+              </h2>
+              <div
+                id="collapseThree"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body profile-content">
+                  <i class="bi bi-play-btn icons"></i>
+                  <div>
+                    <h6>Create your community</h6>
+                    <p>
+                      The best way to get started is to quit talking and being
+                      doing
+                    </p>
+                  </div>
+                  <i class="bi bi-patch-check verify"></i>
+                </div>
+
+                <!------------------------ second ---------------->
+                <div class="accordion-body profile-content">
+                  <i class="bi bi-house icons"></i>
+                  <div>
+                    <h6>Get to know Tribe Platform</h6>
+                    <p>See what you'll be able to do with Tribe</p>
+                  </div>
+                  <button class="btn">Play video</button>
+                </div>
+
+                <!------------------------ Third ---------------->
+                <div class="accordion-body profile-content">
+                  <i class="bi bi-file-arrow-up icons"></i>
+                  <div>
+                    <h6>Upload your logo</h6>
+                    <p>Select an image and upload your logo</p>
+                  </div>
+                  <button class="btn">Upload logo</button>
+                </div>
+
+                <!------------------------ Four ---------------->
+                <div class="accordion-body profile-content">
+                  <i class="bi bi-people-fill icons"></i>
+                  <div>
+                    <h6>Invite your teammates</h6>
+                    <p>Invite other admins,friend and moderators</p>
+                  </div>
+
+                  <button class="btn">Invite</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="profile-info">
+          <span class="user">C</span>
+          <a href="#"><i class="bi bi-house"></i></a>
+          <a href="#"><i class="bi bi-people-fill"></i> </a>
+          <a href="#"><i class="bi bi-calendar-fill"></i> </a>
+          <a href="#"> <i class="bi bi-briefcase-fill"></i> </a>
+          <a href="#"> <i class="bi bi-people-fill"></i> </a>
+        </div>
+
+        <div class="msg">
+          <a href="#">
+            <i class="bi bi-chat-right-text-fill"></i>
+          </a>
+        </div>
+      </div>
+      <!--  -->
+    </section>
+  </body>
+</html>
